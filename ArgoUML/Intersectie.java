@@ -34,8 +34,10 @@ public abstract class Intersectie implements IntersectieInterface {
   }
   public void updateSemafoare(Semafor semafor) {
         for (Semafor s : semafoare) {
-            if (s == semafor)
+            if (s == semafor) {
                 s.color = "Green";
+                s.time = getStreetPriority(s.drum);
+            }
             else
                 s.color = "Red";
         }
