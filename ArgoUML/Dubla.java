@@ -5,17 +5,13 @@ public class Dubla extends Intersectie {
     public Dubla() {super();}
 
     @Override
-    public int getStreetPriority() {
-        return 0;
-    }
-
-    @Override
     public void updateSemafoare(Semafor semafor) {
-
-    }
-
-    @Override
-    public Semafor determineNext() {
-        return null;
+        int index = this.semafoare.indexOf(semafor);
+        for (Semafor s : this.semafoare) {
+            if (this.semafoare.indexOf(semafor) % 2 == index % 2)
+                s.color = "Green";
+            else
+                s.color = "Red";
+        }
     }
 }
