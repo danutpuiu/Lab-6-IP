@@ -1,36 +1,47 @@
 package ArgoUML;
 
-import b.c.D;
-
-import java.util.Queue;
 import java.util.Vector;
 
 public class Drum {
 
-  public Queue<Vehicul> vehicule;
+  public Vector<Vehicul> vehicule;
 
   public Intersectie myIntersectie;
 
 
   public Drum(Intersectie intersectie) {
       this.myIntersectie = intersectie;
+      this.vehicule = new Vector<>();
   }
 
 
-  public int getVehicleCount() {
-  return 0;
-  }
+  public int getVehicleCount() { return this.vehicule.size(); }
 
   public int getPublicTransportCount() {
-  return 0;
+    int count = 0;
+    for (Vehicul v : this.vehicule) {
+        if (v.type.startsWith("Public"))
+            count++;
+    }
+    return count;
   }
 
   public int getPersonalVehCount() {
-  return 0;
+      int count = 0;
+      for (Vehicul v : this.vehicule) {
+          if (v.type.startsWith("Personal"))
+              count++;
+      }
+      return count;
   }
 
   public int getCargoTransportCount() {
-  return 0;
+      int count = 0;
+      for (Vehicul v : this.vehicule) {
+          if (v.type.startsWith("Marfa"))
+              count++;
+      }
+      return count;
   }
 
 }
