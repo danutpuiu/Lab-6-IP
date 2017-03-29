@@ -1,6 +1,9 @@
 package ArgoUML;
 
-public class Rond implements Intersectie {
+public class Rond extends Intersectie {
+
+    public Rond() {super();}
+
     @Override
     public int getStreetPriority() {
         return 0;

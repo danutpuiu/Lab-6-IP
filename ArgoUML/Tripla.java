@@ -1,6 +1,9 @@
 package ArgoUML;
 
-public class Tripla implements Intersectie {
+public class Tripla extends Intersectie {
+
+    public Tripla() {super();}
+
     @Override
     public int getStreetPriority() {
         return 0;

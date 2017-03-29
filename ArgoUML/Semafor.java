@@ -12,6 +12,11 @@ public class Semafor {
 
 
 
+  public Semafor(Drum drum, Intersectie intersectie) {
+      this.drum = drum;
+      this.myIntersectie = intersectie;
+  }
+
   public int getTime() {
   return 0;
   }

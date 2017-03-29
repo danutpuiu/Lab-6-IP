@@ -2,9 +2,14 @@ package ArgoUML;
 
 import java.util.Vector;
 
-public interface Vehicul {
+public abstract class Vehicul {
 
-  public String type = new String();
-  public Drum   myDrum = new Drum();
+  String type;
+  Drum   myDrum;
+
+  public Vehicul(Drum drum, String type) {
+    this.myDrum = drum;
+    this.type = type;
+  }
 
 }

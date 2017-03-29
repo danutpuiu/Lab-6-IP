@@ -1,4 +1,7 @@
 package ArgoUML;
 
-public class TransportPersonal implements Vehicul {
+public class TransportPersonal extends Vehicul {
+    public TransportPersonal(Drum drum) {
+        super(drum, "Personal");
+    }
 }

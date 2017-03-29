@@ -2,7 +2,7 @@ package ArgoUML;
 
 import java.util.Vector;
 
-public interface Intersectie {
+public abstract class Intersectie implements IntersectieInterface {
 
   public Vector<Semafor> semafoare = new Vector<>();
 
@@ -10,10 +10,18 @@ public interface Intersectie {
 
 
 
-  public int getStreetPriority();
+  public Intersectie(){}
 
-  public void updateSemafoare(Semafor semafor);
+  public int getStreetPriority() {
+      return 0;
+  }
 
-  public Semafor determineNext();
+  public void updateSemafoare(Semafor semafor) {
+
+  }
+
+  public Semafor determineNext() {
+      return semafoare.elementAt(0);
+  }
 
 }
