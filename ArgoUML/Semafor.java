@@ -1,7 +1,5 @@
 package ArgoUML;
 
-import java.util.Vector;
-
 public class Semafor {
 
   public int time;
@@ -15,20 +13,19 @@ public class Semafor {
   public Semafor(Drum drum, Intersectie intersectie) {
       this.drum = drum;
       this.myIntersectie = intersectie;
+      this.color = "Red";
   }
 
   public int getTime() {
-  return 0;
+  return this.time;
   }
 
   public String getColor() {
-  return null;
+  return this.color;
   }
 
-  public void setColor() {
-  }
+  public void setColor(String color) { this.color = color; }
 
-  public void setTime() {
-  }
+  public void setTime(int time) { this.time = time; }
 
 }
